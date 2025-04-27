@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="index">
+    <section id="registerSection">
+        <form id="registerForm">
+            <input id="nameinp" type="text" placeholder="Enter Name">
+            <input id="emailinp" type="text" placeholder="Enter Email">
+            <input id="passwordinp" type="text" placeholder="Enter Password">
+            <input id="confirminp" type="text" placeholder="Confirm Password">
+            <button id="registerbtn" onclick="register()" type="button">Register</button>
+            <div id="nameError" class="error-message"></div>
+            <div id="emailError" class="error-message"></div>
+            <div id="passwordError" class="error-message"></div>
+            <div id="confirmError" class="error-message"></div>
+        </form>
+        <form id="loginForm">
+            <input id="loginEmail" type="text" placeholder="Email">
+            <input id="loginPass" type="text" placeholder="Password">
+            <button id="loginbtn" onclick="login()" type="button">Login</button>
+        </form>
+    </section>
+
+
+    <script src="register.js"></script>
+</body>
+
+</html>

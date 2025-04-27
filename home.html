@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="home.css">
+
+</head>
+
+<body id="home">
+    <header>
+        <nav class="left_nav">
+            <a href="" class="logo_link"><img src="./imgs/logo.png" class="logo_img"></a>
+            <!-- <div class="navElement"><a href="">Home</a></div> -->
+        </nav>
+        <nav class="mid_nav">
+
+        </nav>
+        <nav class="right_nav">
+            <!-- <div class="navElement3"><a href="">
+                <img id="cartLogo" src="./imgs/cart2.png">
+            </a></div> -->
+            <div class="navElement">
+                <div id="cartLogo" onclick="DropDownCart()">
+                    <span id="cartLogoNumber">0</span>
+                    <img id="cartLogo" src="./imgs/cart2.png">
+                </div>
+            </div>
+            <div class="navElement" id="userName">User</div>
+            <div class="navElement"><a href="#ContactUs">Contact Us</a></div>
+            <div class="navElement">
+                <div id="logOutBtn">Logout</div>
+            </div>
+        </nav>
+        <div id="dropDownCart">
+            <table>
+                <!-- table rows are added by JS -->
+                <tfoot>
+                    <td>total: </td>
+                    <td id="showTotalPrice">000,00</td>
+                    <td id="egp">egp</td>
+                </tfoot>
+            </table>
+        </div>
+    </header>
+
+    <section id="slider">
+        <img id="sliderImg" src="./slider_imgs/1.jpg">
+    </section>
+
+    <section id="ourProductsSection">
+        <section id="productsHeader">
+            <h1>Our Products</h1>
+        </section>
+        <section id="productsBody">
+            <section id="leftBar">
+                <h3>Category</h3><br>
+                <input type="checkbox" class="categoryCheckbox" id="electronics" name="electronics" value="electronics">
+                <label for="electronics">Electronics</label><br><br>
+                <input type="checkbox" class="categoryCheckbox" id="fashion" name="fashion" value="fashion">
+                <label for="fashion">Fashion</label><br><br>
+                <input type="checkbox" class="categoryCheckbox" id="school" name="school" value="school">
+                <label for="school">School</label><br><br>
+                <input type="checkbox" class="categoryCheckbox" id="grocery" name="grocery" value="grocery">
+                <label for="grocery">Grocery</label><br><br>
+                <input type="checkbox" class="categoryCheckbox" id="appliances" name="appliances" value="appliances">
+                <label for="appliances">Appliances</label><br><br>
+            </section>
+            <section id="mainProducts">
+                <div class="productCard electronics" id="101">
+                    <div class="productImg">
+                        <img src="products_imgs/mouse2.jpg">
+                    </div>
+                    <div class="productActions">
+                        <div class="left">
+                            <p class="productDescription">Mouse</p>
+                            <span class="productPrice">207</span> egp
+                        </div>
+                        <div class="right">
+                            <button onclick="AddToCart(event)">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="productCard electronics">
+                    <div class="productImg">
+                        <img src="products_imgs/kbrd.jpg">
+                    </div>
+                    <div class="productActions">
+                        <div class="left">
+                            <p class="productDescription">Keyboard</p>
+                            <span class="productPrice">1199</span> egp
+                        </div>
+                        <div class="right">
+                            <button onclick="AddToCart(event)">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="productCard fashion">
+                    <div class="productImg">
+                        <img src="products_imgs/shoes.jpg">
+                    </div>
+                    <div class="productActions">
+                        <div class="left">
+                            <p class="productDescription">Shoes</p>
+                            <span class="productPrice">1940</span> egp
+                        </div>
+                        <div class="right">
+                            <button onclick="AddToCart(event)">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="productCard school">
+                    <div class="productImg">
+                        <img src="products_imgs/notebook.jpg">
+                    </div>
+                    <div class="productActions">
+                        <div class="left">
+                            <p class="productDescription">notebook</p>
+                            <span class="productPrice">113</span> egp
+                        </div>
+                        <div class="right">
+                            <button onclick="AddToCart(event)">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="productCard grocery">
+                    <div class="productImg">
+                        <img src="products_imgs/clorox.jpg">
+                    </div>
+                    <div class="productActions">
+                        <div class="left">
+                            <p class="productDescription">Clorox</p>
+                            <span class="productPrice">163</span> egp
+                        </div>
+                        <div class="right">
+                            <button onclick="AddToCart(event)">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="productCard grocery">
+                    <div class="productImg">
+                        <img src="products_imgs/coffe.jpg">
+                    </div>
+                    <div class="productActions">
+                        <div class="left">
+                            <p class="productDescription">Coffee</p>
+                            <span class="productPrice">88</span> egp
+                        </div>
+                        <div class="right">
+                            <button onclick="AddToCart(event)">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="productCard grocery">
+                    <div class="productImg">
+                        <img src="products_imgs/bodySpray.jpg">
+                    </div>
+                    <div class="productActions">
+                        <div class="left">
+                            <p class="productDescription">Body Spray</p>
+                            <span class="productPrice">112</span> egp
+                        </div>
+                        <div class="right">
+                            <button onclick="AddToCart(event)">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="productCard appliances">
+                    <div class="productImg">
+                        <img src="products_imgs/kettle.jpg">
+                    </div>
+                    <div class="productActions">
+                        <div class="left">
+                            <p class="productDescription">Kettle</p>
+                            <span class="productPrice">329</span> egp
+                        </div>
+                        <div class="right">
+                            <button onclick="AddToCart(event)">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="productCard appliances">
+                    <div class="productImg">
+                        <img src="products_imgs/split Air Conditioner.jpg">
+                    </div>
+                    <div class="productActions">
+                        <div class="left">
+                            <p class="productDescription">Air Conditioner</p>
+                            <span class="productPrice">23199</span> egp
+                        </div>
+                        <div class="right">
+                            <button onclick="AddToCart(event)">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="productCard appliances">
+                    <div class="productImg">
+                        <img src="products_imgs/Stand Fan.jpg">
+                    </div>
+                    <div class="productActions">
+                        <div class="left">
+                            <p class="productDescription">Stand fan</p>
+                            <span class="productPrice">843</span> egp
+                        </div>
+                        <div class="right">
+                            <button onclick="AddToCart(event)">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="productCard fashion">
+                    <div class="productImg">
+                        <img src="products_imgs/Slim Jean.jpg">
+                    </div>
+                    <div class="productActions">
+                        <div class="left">
+                            <p class="productDescription">Jeans</p>
+                            <span class="productPrice">499</span> egp
+                        </div>
+                        <div class="right">
+                            <button onclick="AddToCart(event)">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="productCard fashion">
+                    <div class="productImg">
+                        <img src="products_imgs/Jacket.jpg">
+                    </div>
+                    <div class="productActions">
+                        <div class="left">
+                            <p class="productDescription">Jacket</p>
+                            <span class="productPrice">2115</span> egp
+                        </div>
+                        <div class="right">
+                            <button onclick="AddToCart(event)">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="productCard school">
+                    <div class="productImg">
+                        <img src="products_imgs/Pencil Case.jpg">
+                    </div>
+                    <div class="productActions">
+                        <div class="left">
+                            <p class="productDescription">Pencil Case</p>
+                            <span class="productPrice">75</span> egp
+                        </div>
+                        <div class="right">
+                            <button onclick="AddToCart(event)">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="productCard school">
+                    <div class="productImg">
+                        <img src="products_imgs/pen.jpg">
+                    </div>
+                    <div class="productActions">
+                        <div class="left">
+                            <p class="productDescription">Pen</p>
+                            <span class="productPrice">5</span> egp
+                        </div>
+                        <div class="right">
+                            <button onclick="AddToCart(event)">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="productCard grocery">
+                    <div class="productImg">
+                        <img src="products_imgs/Pasta.jpg">
+                    </div>
+                    <div class="productActions">
+                        <div class="left">
+                            <p class="productDescription">Pasta</p>
+                            <span class="productPrice">25</span> egp
+                        </div>
+                        <div class="right">
+                            <button onclick="AddToCart(event)">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="productCard appliances">
+                    <div class="productImg">
+                        <img src="products_imgs/Washing Machine.jpg">
+                    </div>
+                    <div class="productActions">
+                        <div class="left">
+                            <p class="productDescription">Washing Machine</p>
+                            <span class="productPrice">17900</span> egp
+                        </div>
+                        <div class="right">
+                            <button onclick="AddToCart(event)">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </section>
+
+
+
+
+    <button id="upBtn" onclick="location.href='#'">☝</button>
+    <footer>
+        <h3 id="ContactUs">Contact Us</h3>
+        <p>Phone +20 10 131 83675</p>
+        <p>Email gohary200023@gmail.com</p>
+        <a href="https://www.linkedin.com/in/ahmed-elgohary-9023b9318/">Linkedin ahmed-elgohary-9023b9318</a>
+        <a href="https://github.com/AhmedElgohary10">GitHub AhmedElgohary10</p>
+    </footer>
+
+
+    <script src="homeSlider.js"></script>
+    <script src="products.js"></script>
+    <script src="AddToCart.js"></script>
+    <script src="header.js"></script>
+</body>
+
+</html>
